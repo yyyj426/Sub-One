@@ -1,4 +1,4 @@
-﻿import { getCountryTerms } from '@/shared/lib/utils/constants';
+import { getCountryTerms } from '@/common/utils/constants';
 
 export interface SearchableNode {
     name?: string;

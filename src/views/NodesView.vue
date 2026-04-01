@@ -1,18 +1,18 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, defineAsyncComponent } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
 import { useNodeManagement } from '@/entities/node/model/useNodeManagement';
-import { useBatchSelection } from '@/shared/lib/hooks/useBatchSelection';
-import { usePagination } from '@/shared/lib/hooks/usePagination';
-import { useTabActionTrigger } from '@/shared/lib/hooks/useTabActionTrigger';
-import type { Node } from '@/shared/lib/types/index';
-import BatchActionToolbar from '@/shared/ui/BatchActionToolbar.vue';
-import ConfirmModal from '@/shared/ui/ConfirmModal.vue';
-import EmptyState from '@/shared/ui/EmptyState.vue';
-import MoreMenu from '@/shared/ui/MoreMenu.vue';
-import Pagination from '@/shared/ui/Pagination.vue';
+import { useBatchSelection } from '@/common/hooks/useBatchSelection';
+import { usePagination } from '@/common/hooks/usePagination';
+import { useTabActionTrigger } from '@/common/hooks/useTabActionTrigger';
+import type { Node } from '@/common/types/index';
+import BatchActionToolbar from '@/common/ui/BatchActionToolbar.vue';
+import ConfirmModal from '@/common/ui/ConfirmModal.vue';
+import EmptyState from '@/common/ui/EmptyState.vue';
+import MoreMenu from '@/common/ui/MoreMenu.vue';
+import Pagination from '@/common/ui/Pagination.vue';
 import draggable from 'vuedraggable';
 
 import { useDataStore } from '@/stores/useAppStore';
@@ -29,7 +29,7 @@ const emit = defineEmits<{
 
 // Async Components
 const NodeModal = defineAsyncComponent(() => import('@/widgets/node/NodeModal.vue'));
-const BulkImportModal = defineAsyncComponent(() => import('@/shared/ui/BulkImportModal.vue'));
+const BulkImportModal = defineAsyncComponent(() => import('@/common/ui/BulkImportModal.vue'));
 const SubscriptionImportModal = defineAsyncComponent(
     () => import('@/widgets/node/SubscriptionImportModal.vue')
 );
@@ -71,7 +71,7 @@ const {
     paginatedItems: paginatedNodes,
     changePage,
     resetPage
-} = usePagination(filteredNodes, 15, isSortingNodes);
+} = usePagination<Node>(filteredNodes, 15, isSortingNodes);
 
 const nodesMoreMenuItems = [
     { key: 'auto-sort', label: '一键排序' },

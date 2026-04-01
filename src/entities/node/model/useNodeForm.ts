@@ -1,8 +1,8 @@
-﻿import { computed, ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
-import type { Node } from '@/shared/lib/types/index';
-import { getProtocol } from '@/shared/lib/utils/protocols';
-import { extractHostAndPort, extractNodeName } from '@/shared/lib/utils/utils';
+import type { Node } from '@/common/types/index';
+import { getProtocol } from '@/common/utils/protocols';
+import { extractHostAndPort, extractNodeName } from '@/common/utils/utils';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 

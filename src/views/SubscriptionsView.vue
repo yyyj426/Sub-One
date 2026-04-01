@@ -1,18 +1,18 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, defineAsyncComponent } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
 import { useSubscriptionManagement } from '@/entities/subscription/model/useSubscriptionManagement';
-import { useBatchSelection } from '@/shared/lib/hooks/useBatchSelection';
-import { usePagination } from '@/shared/lib/hooks/usePagination';
-import { useTabActionTrigger } from '@/shared/lib/hooks/useTabActionTrigger';
-import type { Subscription } from '@/shared/lib/types/index';
-import BatchActionToolbar from '@/shared/ui/BatchActionToolbar.vue';
-import ConfirmModal from '@/shared/ui/ConfirmModal.vue';
-import EmptyState from '@/shared/ui/EmptyState.vue';
-import MoreMenu from '@/shared/ui/MoreMenu.vue';
-import Pagination from '@/shared/ui/Pagination.vue';
+import { useBatchSelection } from '@/common/hooks/useBatchSelection';
+import { usePagination } from '@/common/hooks/usePagination';
+import { useTabActionTrigger } from '@/common/hooks/useTabActionTrigger';
+import type { Subscription } from '@/common/types/index';
+import BatchActionToolbar from '@/common/ui/BatchActionToolbar.vue';
+import ConfirmModal from '@/common/ui/ConfirmModal.vue';
+import EmptyState from '@/common/ui/EmptyState.vue';
+import MoreMenu from '@/common/ui/MoreMenu.vue';
+import Pagination from '@/common/ui/Pagination.vue';
 import draggable from 'vuedraggable';
 
 import { useDataStore } from '@/stores/useAppStore';
@@ -67,7 +67,7 @@ const {
     paginatedItems: paginatedSubscriptions,
     changePage,
     resetPage
-} = usePagination(filteredSubscriptions, 6, isSortingSubs);
+} = usePagination<Subscription>(filteredSubscriptions, 6, isSortingSubs);
 
 const subsMoreMenuItems = [
     { key: 'batch-delete', label: '批量删除' },

@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
-import type { Profile } from '@/shared/lib/types/index';
+import type { Profile } from '@/common/types/index';
 import NodeDistributionChart from '@/widgets/dashboard/NodeDistributionChart.vue';
 
 import { useDataStore } from '@/stores/useAppStore';

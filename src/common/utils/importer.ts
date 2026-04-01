@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==================== 订阅和节点导入模块 ====================
  *
  * 功能说明：
@@ -9,10 +9,10 @@
  *
  * ==========================================================
  */
-import type { Node, ProxyType, Subscription } from '@/shared/lib/types';
-import { HTTP_REGEX, NODE_PROTOCOL_REGEX } from '@/shared/lib/utils/constants';
-import { getProtocol } from '@/shared/lib/utils/protocols';
-import { extractHostAndPort, extractNodeName, generateUUID } from '@/shared/lib/utils/utils';
+import type { Node, ProxyType, Subscription } from '@/common/types';
+import { HTTP_REGEX, NODE_PROTOCOL_REGEX } from '@/common/utils/constants';
+import { getProtocol } from '@/common/utils/protocols';
+import { extractHostAndPort, extractNodeName, generateUUID } from '@/common/utils/utils';
 
 // ==================== 接口定义 ====================
 

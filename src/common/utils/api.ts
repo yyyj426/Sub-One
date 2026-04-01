@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==================== API 请求模块 ====================
  *
  * 功能说明：
@@ -8,7 +8,7 @@
  *
  * ======================================================
  */
-import type { ApiResponse, AppConfig, Profile, Subscription, SubscriptionUserInfo } from '@/shared/lib/types';
+import type { ApiResponse, AppConfig, Profile, Subscription, SubscriptionUserInfo } from '@/common/types';
 
 // 导出 ApiResponse 类型供其他模块使用
 export type { ApiResponse };

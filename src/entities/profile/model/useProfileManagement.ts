@@ -1,6 +1,6 @@
-﻿import { computed, ref } from 'vue';
+import { computed, ref } from 'vue';
 
-import type { Profile } from '@/shared/lib/types/index';
+import type { Profile } from '@/common/types/index';
 
 import { useDataStore } from '@/stores/useAppStore';
 import { useToastStore } from '@/stores/useNotificationStore';

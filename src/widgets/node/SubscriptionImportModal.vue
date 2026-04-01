@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 订阅导入模态框 ====================
   
   功能说明：
@@ -14,8 +14,8 @@
 import { ref } from 'vue';
 
 import { useSubscriptionImport } from '@/entities/node/model/useSubscriptionImport';
-import type { Node } from '@/shared/lib/types/index';
-import Modal from '@/shared/ui/BaseModal.vue';
+import type { Node } from '@/common/types/index';
+import Modal from '@/common/ui/BaseModal.vue';
 
 const props = defineProps<{
     show: boolean;

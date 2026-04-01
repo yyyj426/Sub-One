@@ -1,8 +1,8 @@
-﻿import { ref } from 'vue';
+import { ref } from 'vue';
 
-import type { Subscription } from '@/shared/lib/types/index';
-import { HTTP_REGEX } from '@/shared/lib/utils/constants';
-import { createSubscription } from '@/shared/lib/utils/importer';
+import type { Subscription } from '@/common/types/index';
+import { HTTP_REGEX } from '@/common/utils/constants';
+import { createSubscription } from '@/common/utils/importer';
 
 import { useDataStore } from '@/stores/useAppStore';
 import { useToastStore } from '@/stores/useNotificationStore';

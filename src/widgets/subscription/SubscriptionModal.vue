@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 订阅编辑模态框 ====================
   
   功能说明：
@@ -13,9 +13,9 @@
 
 <script setup lang="ts">
 import { useSubscriptionForm } from '@/entities/subscription/model/useSubscriptionForm';
-import type { Subscription } from '@/shared/lib/types/index';
-import Modal from '@/shared/ui/BaseModal.vue';
-import NodeFilterRuleEditor from '@/shared/ui/NodeFilterRuleEditor.vue';
+import type { Subscription } from '@/common/types/index';
+import Modal from '@/common/ui/BaseModal.vue';
+import NodeFilterRuleEditor from '@/common/ui/NodeFilterRuleEditor.vue';
 
 const props = defineProps<{
     /** 显示状态 */

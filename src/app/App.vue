@@ -12,7 +12,7 @@
 import { onMounted } from 'vue';
 import { useThemeStore } from '@/stores/useThemeStore';
 import { useLayoutStore } from '@/stores/useLayoutStore';
-import Toast from '@/shared/ui/Toast.vue';
+import Toast from '@/common/ui/Toast.vue';
 
 const themeStore = useThemeStore();
 const layoutStore = useLayoutStore();

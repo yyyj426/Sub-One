@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 节点详情模态框 ====================
   
   功能说明：
@@ -21,9 +21,9 @@ import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 
 import { useNodeFetching } from '@/entities/node/model/useNodeFetching';
 import { useNodeSelection } from '@/entities/node/model/useNodeSelection';
-import type { Profile, Subscription } from '@/shared/lib/types/index';
-import { getProtocolInfo } from '@/shared/lib/utils/protocols';
-import { filterNodes } from '@/shared/lib/utils/search';
+import type { Profile, Subscription } from '@/common/types/index';
+import { getProtocolInfo } from '@/common/utils/protocols';
+import { filterNodes } from '@/common/utils/search';
 
 const props = defineProps<{
     show: boolean;

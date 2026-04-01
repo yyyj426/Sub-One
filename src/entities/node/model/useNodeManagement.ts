@@ -1,7 +1,7 @@
-﻿import { computed, ref } from 'vue';
+import { computed, ref } from 'vue';
 
-import type { Node } from '@/shared/lib/types/index';
-import { createNode, parseImportText } from '@/shared/lib/utils/importer';
+import type { Node } from '@/common/types/index';
+import { createNode, parseImportText } from '@/common/utils/importer';
 
 import { useDataStore } from '@/stores/useAppStore';
 import { useToastStore } from '@/stores/useNotificationStore';

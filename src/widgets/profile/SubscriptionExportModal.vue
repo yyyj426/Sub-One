@@ -1,6 +1,6 @@
-﻿<script setup lang="ts">
-import type { AppConfig, Profile } from '@/shared/lib/types/index';
-import { copyToClipboard } from '@/shared/lib/utils/utils';
+<script setup lang="ts">
+import type { AppConfig, Profile } from '@/common/types/index';
+import { copyToClipboard } from '@/common/utils/utils';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 

@@ -1,4 +1,4 @@
-﻿import { computed } from 'vue';
+import { computed } from 'vue';
 
 import { defineStore } from 'pinia';
 
@@ -7,9 +7,9 @@ import { useConfig } from '@/entities/config/model/useConfig';
 import { useNodes } from '@/entities/node/model/useNodes';
 import { useProfiles } from '@/entities/profile/model/useProfiles';
 import { useSubscriptions } from '@/entities/subscription/model/useSubscriptions';
-import type { AppConfig, Node, Profile, Subscription } from '@/shared/lib/types/index';
-import * as api from '@/shared/lib/utils/api';
-import { HTTP_REGEX } from '@/shared/lib/utils/constants';
+import type { AppConfig, Node, Profile, Subscription } from '@/common/types/index';
+import * as api from '@/common/utils/api';
+import { HTTP_REGEX } from '@/common/utils/constants';
 
 import { useNotificationStore } from '@/stores/useNotificationStore';
 

@@ -1,6 +1,6 @@
-﻿import { computed, ref } from 'vue';
+import { computed, ref } from 'vue';
 
-import type { Node } from '@/shared/lib/types/index';
+import type { Node } from '@/common/types/index';
 
 export function useNodes(saveData: (reason: string, showToast?: boolean) => Promise<boolean>) {
     const manualNodes = ref<Node[]>([]);

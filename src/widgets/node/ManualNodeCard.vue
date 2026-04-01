@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 手动节点卡片组件 ====================
   
   功能说明：
@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import type { Node } from '@/shared/lib/types/index';
-import { getProtocol, getProtocolInfo } from '@/shared/lib/utils/protocols';
-import { copyToClipboard } from '@/shared/lib/utils/utils';
+import type { Node } from '@/common/types/index';
+import { getProtocol, getProtocolInfo } from '@/common/utils/protocols';
+import { copyToClipboard } from '@/common/utils/utils';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 

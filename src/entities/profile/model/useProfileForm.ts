@@ -1,8 +1,8 @@
-﻿import { computed, ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
-import type { Node, Profile, Subscription } from '@/shared/lib/types/index';
-import { filterNodes } from '@/shared/lib/utils/search';
-import { generateShortId } from '@/shared/lib/utils/utils';
+import type { Node, Profile, Subscription } from '@/common/types/index';
+import { filterNodes } from '@/common/utils/search';
+import { generateShortId } from '@/common/utils/utils';
 
 export interface UseProfileFormProps {
     profile?: Profile | null;

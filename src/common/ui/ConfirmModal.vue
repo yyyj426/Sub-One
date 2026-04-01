@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 通用确认模态框 ====================
   
   功能说明：
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import Modal from '@/shared/ui/BaseModal.vue';
+import Modal from '@/common/ui/BaseModal.vue';
 
 // ==================== Props 和 Emit ====================
 

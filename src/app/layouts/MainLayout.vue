@@ -4,17 +4,17 @@ import { useRoute, useRouter } from 'vue-router';
 
 import { storeToRefs } from 'pinia';
 
-import Footer from '@/shared/layout/AppFooter.vue';
-import Sidebar from '@/shared/layout/AppSidebar.vue';
-import { useDataCounts } from '@/shared/lib/hooks/useDataCounts';
-import { APP_TABS, type AppTab } from '@/shared/lib/utils/navigation';
+import Footer from '@/app/layouts/AppFooter.vue';
+import Sidebar from '@/common/layout/AppSidebar.vue';
+import { useDataCounts } from '@/common/hooks/useDataCounts';
+import { APP_TABS, type AppTab } from '@/common/utils/navigation';
 import { NodeDetailsModal } from '@/widgets/node';
 
 import { useDataStore } from '@/stores/useAppStore';
 import { useLayoutStore } from '@/stores/useLayoutStore';
 import { useUIStore } from '@/stores/useNotificationStore';
 import { useSessionStore } from '@/stores/useSessionStore';
-import { type Profile, type Subscription } from '@/shared/lib/types/index';
+import { type Profile, type Subscription } from '@/common/types/index';
 
 const SettingsModal = defineAsyncComponent(() =>
     import('@/widgets/settings').then((module) => module.SettingsModal)

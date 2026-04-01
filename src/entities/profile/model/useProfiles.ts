@@ -1,7 +1,7 @@
-﻿import { ref } from 'vue';
+import { ref } from 'vue';
 
-import type { Profile } from '@/shared/lib/types/index';
-import { generateShortId, generateUUID } from '@/shared/lib/utils/utils';
+import type { Profile } from '@/common/types/index';
+import { generateShortId, generateUUID } from '@/common/utils/utils';
 
 export function useProfiles(
     saveData: (reason: string, showToast?: boolean) => Promise<boolean>,

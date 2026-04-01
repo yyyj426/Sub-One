@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 系统设置模态框 ====================
   
   功能说明：
@@ -19,10 +19,10 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 
-import type { AppConfig } from '@/shared/lib/types/index';
-import { fetchSettings, saveSettings } from '@/shared/lib/utils/api';
-import Modal from '@/shared/ui/BaseModal.vue';
-import StorageBackendSwitcher from '@/shared/ui/StorageBackendSwitcher.vue';
+import type { AppConfig } from '@/common/types/index';
+import { fetchSettings, saveSettings } from '@/common/utils/api';
+import Modal from '@/common/ui/BaseModal.vue';
+import StorageBackendSwitcher from '@/widgets/settings/StorageBackendSwitcher.vue';
 
 import { useDataStore } from '@/stores/useAppStore';
 import { useToastStore } from '@/stores/useNotificationStore';

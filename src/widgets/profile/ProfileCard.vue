@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   订阅组卡片组件 - 显示订阅组信息
   支持启用/禁用、编辑、删除、复制链接、查看节点等功能
 -->
@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import type { Profile, Subscription } from '@/shared/lib/types/index';
+import type { Profile, Subscription } from '@/common/types/index';
 
 const props = withDefaults(
     defineProps<{

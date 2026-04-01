@@ -7,7 +7,7 @@ import type {
     ProxyNode as SharedProxyNode,
     Subscription as SharedSubscription,
     SubscriptionUserInfo as SharedUserInfo
-} from '../../../../lib/backend/proxy/types';
+} from '../../../lib/backend/proxy/types';
 
 /**
  * ==================== TypeScript 类型定义文件 ====================
@@ -46,7 +46,7 @@ export type {
     // 其他
     User,
     UserRole
-} from '../../../../lib/backend/proxy/types';
+} from '../../../lib/backend/proxy/types';
 
 // ==================== 3. 类型扩展定义 ====================
 

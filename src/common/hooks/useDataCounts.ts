@@ -1,9 +1,9 @@
-﻿import { type Ref, computed } from 'vue';
+import { type Ref, computed } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
-import type { InitialData } from '@/shared/lib/types/index';
-import { HTTP_REGEX } from '@/shared/lib/utils/constants';
+import type { InitialData } from '@/common/types/index';
+import { HTTP_REGEX } from '@/common/utils/constants';
 
 import { useDataStore } from '@/stores/useAppStore';
 

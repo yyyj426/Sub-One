@@ -1,6 +1,6 @@
-﻿import { ref } from 'vue';
+import { ref } from 'vue';
 
-import type { AppConfig } from '@/shared/lib/types/index';
+import type { AppConfig } from '@/common/types/index';
 
 export function useConfig() {
     const config = ref<AppConfig>({

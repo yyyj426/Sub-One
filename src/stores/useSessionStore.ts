@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==================== 会话管理 Store ====================
  *
  * 功能说明：
@@ -13,14 +13,14 @@ import { ref } from 'vue';
 
 import { defineStore } from 'pinia';
 
-import type { InitialData } from '@/shared/lib/types/index';
+import type { InitialData } from '@/common/types/index';
 import {
     initializeSystem as apiInitializeSystem,
     login as apiLogin,
     logout as apiLogout,
     checkSystemStatus,
     fetchInitialData
-} from '@/shared/lib/utils/api';
+} from '@/common/utils/api';
 
 /**
  * 会话状态类型定义

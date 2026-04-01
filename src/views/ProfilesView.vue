@@ -1,18 +1,18 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, defineAsyncComponent } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
 import { useProfileManagement } from '@/entities/profile/model/useProfileManagement';
-import { useBatchSelection } from '@/shared/lib/hooks/useBatchSelection';
-import { usePagination } from '@/shared/lib/hooks/usePagination';
-import { useTabActionTrigger } from '@/shared/lib/hooks/useTabActionTrigger';
-import type { Profile } from '@/shared/lib/types/index';
-import BatchActionToolbar from '@/shared/ui/BatchActionToolbar.vue';
-import ConfirmModal from '@/shared/ui/ConfirmModal.vue';
-import EmptyState from '@/shared/ui/EmptyState.vue';
-import MoreMenu from '@/shared/ui/MoreMenu.vue';
-import Pagination from '@/shared/ui/Pagination.vue';
+import { useBatchSelection } from '@/common/hooks/useBatchSelection';
+import { usePagination } from '@/common/hooks/usePagination';
+import { useTabActionTrigger } from '@/common/hooks/useTabActionTrigger';
+import type { Profile } from '@/common/types/index';
+import BatchActionToolbar from '@/common/ui/BatchActionToolbar.vue';
+import ConfirmModal from '@/common/ui/ConfirmModal.vue';
+import EmptyState from '@/common/ui/EmptyState.vue';
+import MoreMenu from '@/common/ui/MoreMenu.vue';
+import Pagination from '@/common/ui/Pagination.vue';
 
 import { useDataStore } from '@/stores/useAppStore';
 
@@ -43,7 +43,7 @@ const {
     paginatedItems: paginatedProfiles,
     changePage,
     resetPage
-} = usePagination(
+} = usePagination<Profile>(
     computed(() => profiles.value),
     9
 );

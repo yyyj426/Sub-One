@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 import { useNotificationStore as useToastStore } from '@/stores/useNotificationStore';
-import ConfirmModal from '@/shared/ui/ConfirmModal.vue';
+import ConfirmModal from '@/common/ui/ConfirmModal.vue';
 import {
     exportBackup,
     importBackup,
@@ -12,11 +12,11 @@ import {
     deleteSnapshot,
     restoreSnapshot,
     batchDeleteSnapshots
-} from '@/shared/lib/utils/api';
+} from '@/common/utils/api';
 import { onMounted } from 'vue';
 
 // 导入批量选择模块
-import { useBatchSelection } from '@/shared/lib/hooks/useBatchSelection';
+import { useBatchSelection } from '@/common/hooks/useBatchSelection';
 
 const { showToast } = useToastStore();
 const isExporting = ref(false);

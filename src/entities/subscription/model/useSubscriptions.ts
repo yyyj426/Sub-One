@@ -1,8 +1,8 @@
-﻿import { computed, ref } from 'vue';
+import { computed, ref } from 'vue';
 
-import type { Subscription } from '@/shared/lib/types/index';
-import * as api from '@/shared/lib/utils/api';
-import { HTTP_REGEX } from '@/shared/lib/utils/constants';
+import type { Subscription } from '@/common/types/index';
+import * as api from '@/common/utils/api';
+import { HTTP_REGEX } from '@/common/utils/constants';
 
 export function useSubscriptions(
     saveData: (reason: string, showToast?: boolean) => Promise<boolean>

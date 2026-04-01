@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   订阅卡片组件 - 显示订阅源信息
   功能：启用/禁用、编辑、删除、更新、流量显示、延迟测试、批量选择
 -->
@@ -6,10 +6,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import type { Subscription } from '@/shared/lib/types/index';
-import { testLatency } from '@/shared/lib/utils/api';
-import { formatBytes, formatExpiry, getTrafficColorClass } from '@/shared/lib/utils/format';
-import { copyToClipboard } from '@/shared/lib/utils/utils';
+import type { Subscription } from '@/common/types/index';
+import { testLatency } from '@/common/utils/api';
+import { formatBytes, formatExpiry, getTrafficColorClass } from '@/common/utils/format';
+import { copyToClipboard } from '@/common/utils/utils';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 

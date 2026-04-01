@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 节点过滤规则编辑器 ====================
   
   功能说明：
@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 
-import Modal from '@/shared/ui/BaseModal.vue';
+import Modal from '@/common/ui/BaseModal.vue';
 
 // ==================== Props 和 Emit ====================
 

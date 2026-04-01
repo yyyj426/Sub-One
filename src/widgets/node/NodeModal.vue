@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 手动节点编辑模态框 ====================
   
   功能说明：
@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 import { useNodeForm } from '@/entities/node/model/useNodeForm';
-import type { Node } from '@/shared/lib/types/index';
-import Modal from '@/shared/ui/BaseModal.vue';
+import type { Node } from '@/common/types/index';
+import Modal from '@/common/ui/BaseModal.vue';
 
 const props = defineProps<{
     show: boolean;

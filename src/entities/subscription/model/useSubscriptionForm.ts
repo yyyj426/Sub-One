@@ -1,6 +1,6 @@
-﻿import { computed, ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
-import type { Subscription } from '@/shared/lib/types/index';
+import type { Subscription } from '@/common/types/index';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 

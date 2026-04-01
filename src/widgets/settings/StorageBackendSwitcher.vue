@@ -1,9 +1,9 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 
-import ConfirmModal from '@/shared/ui/ConfirmModal.vue';
+import ConfirmModal from '@/common/ui/ConfirmModal.vue';
 
 interface BackendInfo {
     current: 'kv' | 'd1';

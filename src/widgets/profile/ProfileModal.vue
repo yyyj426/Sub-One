@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   ==================== 订阅组编辑模态框 ====================
   
   功能说明：
@@ -18,8 +18,8 @@
 
 <script setup lang="ts">
 import { useProfileForm } from '@/entities/profile/model/useProfileForm';
-import type { Node, Profile, Subscription } from '@/shared/lib/types/index';
-import Modal from '@/shared/ui/BaseModal.vue';
+import type { Node, Profile, Subscription } from '@/common/types/index';
+import Modal from '@/common/ui/BaseModal.vue';
 
 const props = withDefaults(
     defineProps<{

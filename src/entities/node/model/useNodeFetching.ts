@@ -1,7 +1,7 @@
-﻿import { ref } from 'vue';
+import { ref } from 'vue';
 
-import type { Profile, Subscription } from '@/shared/lib/types/index';
-import { getProtocol } from '@/shared/lib/utils/protocols';
+import type { Profile, Subscription } from '@/common/types/index';
+import { getProtocol } from '@/common/utils/protocols';
 import { Base64 } from 'js-base64';
 
 import { useDataStore } from '@/stores/useAppStore';

@@ -1,6 +1,6 @@
-﻿import { Ref, ref } from 'vue';
+import { Ref, ref } from 'vue';
 
-import { copyToClipboard } from '@/shared/lib/utils/utils';
+import { copyToClipboard } from '@/common/utils/utils';
 
 import { useNotificationStore as useToastStore } from '@/stores/useNotificationStore';
 

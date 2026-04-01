@@ -1,7 +1,7 @@
-﻿import { ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 
-import type { Node } from '@/shared/lib/types/index';
-import { parseImportText } from '@/shared/lib/utils/importer';
+import type { Node } from '@/common/types/index';
+import { parseImportText } from '@/common/utils/importer';
 
 import { useToastStore } from '@/stores/useNotificationStore';
 
