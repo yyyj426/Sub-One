@@ -27,7 +27,8 @@ export const defaultSettings: AppConfig = {
     NotifyThresholdDays: 3,
     NotifyThresholdPercent: 90,
 
-    // Cron 安全密钥
+    // Cron 配置
+    cronEnabled: false,  // 默认关闭定时更新
     cronSecret: ''
 };
 

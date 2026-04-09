@@ -155,7 +155,7 @@ const handleSave = async () => {
 };
 
 const cronUrl = computed(() => {
-    if (!settings.value.cronSecret) return '';
+    if (!settings.value.cronEnabled || !settings.value.cronSecret) return '';
     return `${window.location.origin}/api/cron/trigger?token=${settings.value.cronSecret}`;
 });
 
@@ -693,7 +693,32 @@ watch(
                                 </svg>
                                 自动更新(Cron)配置
                             </h4>
-                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                            <!-- 定时更新总开关 -->
+                            <div class="mb-6 flex items-center justify-between rounded-lg bg-gray-50 p-4 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+                                <div>
+                                    <h5 class="text-sm font-semibold text-gray-900 dark:text-gray-100">启用定时更新</h5>
+                                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                                        开启后，可通过第三方 Cron 服务自动更新订阅
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex cursor-pointer items-center">
+                                    <input
+                                        v-model="settings.cronEnabled"
+                                        type="checkbox"
+                                        class="peer sr-only"
+                                    />
+                                    <div
+                                        class="h-6 w-11 rounded-full bg-gray-300 transition-colors peer-checked:bg-indigo-600 peer-focus:ring-2 peer-focus:ring-indigo-500 peer-focus:ring-offset-2 dark:bg-gray-600 dark:peer-focus:ring-offset-gray-800"
+                                    >
+                                        <span
+                                            class="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform peer-checked:translate-x-5"
+                                        ></span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- 定时更新配置（仅在开启时显示） -->
+                            <div v-if="settings.cronEnabled" class="grid grid-cols-1 gap-6 md:grid-cols-2 animate-fade-in">
                                 <div class="group md:col-span-2">
                                     <label
                                         for="cronSecret"
@@ -709,7 +734,7 @@ watch(
                                         placeholder="任意复杂的字符串，例如：my_secret_token"
                                     />
                                     <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
-                                        留空将禁止外部触发。配置后，您可以使用第三方工具（如 UptimeRobot、宝塔计划任务）定期请求：<br />
+                                        配置后，您可以使用第三方工具（如 UptimeRobot、宝塔计划任务）定期请求：<br />
                                         <code class="px-1 py-0.5 mt-1 bg-gray-100 dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 rounded inline-block select-all">/api/cron/trigger?token=您的密钥</code><br />
                                         如果您使用的是 Cloudflare Pages，由于平台限制必须通过这种接口方式触发定时任务；Docker 用户自带内部定时器，可选择配置。
                                     </p>
@@ -736,6 +761,18 @@ watch(
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- 关闭状态提示 -->
+                            <div v-else class="rounded-lg bg-gray-100 p-4 text-center dark:bg-gray-800/50">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    <span class="inline-flex items-center gap-1">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
+                                        定时更新功能已关闭
+                                    </span>
+                                </p>
                             </div>
                         </section>
                     </div>

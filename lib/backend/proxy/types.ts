@@ -391,7 +391,8 @@ export interface AppConfig {
     NotifyThresholdPercent: number;
 
     // Cron 配置
-    cronSecret?: string;
+    cronEnabled?: boolean;  // 是否启用定时更新
+    cronSecret?: string;    // 定时更新安全密钥
 
     // 其他
     [key: string]: any; // 允许扩展

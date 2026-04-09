@@ -180,6 +180,12 @@ export async function handleApiRequest(request: Request, env: Env): Promise<Resp
         try {
             const storage = await getStorage(env);
             const settings = (await storage.get<Partial<AppConfig>>(KV_KEY_SETTINGS)) || {};
+            
+            // 检查是否启用了定时更新
+            if (!settings.cronEnabled) {
+                return new Response(JSON.stringify({ error: '定时更新功能未启用' }), { status: 403 });
+            }
+            
             const cronSecret = settings.cronSecret;
 
             const urlParams = new URL(request.url).searchParams;
